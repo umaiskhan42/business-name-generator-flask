@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Name Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Business Name Generator</h1>
+        <form method="POST">
+            <button type="submit" class="btn">Generate Name</button>
+        </form>
+        {% if business_name %}
+        <div class="result">
+            <h2>Your Business Name:</h2>
+            <p>{{ business_name }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
